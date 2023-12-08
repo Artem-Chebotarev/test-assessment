@@ -1,0 +1,11 @@
+@import "reset";
+@import "/public/fonts/rawline/rawline.css";
+@import "variables/global";
+
+body {
+  font: var(--font-m);
+}
+
+.content-page {
+  display: flex;
+}
