@@ -1,9 +1,9 @@
 .Page {
-  height: calc(100vh - var(--navbar-height));
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 
   font: var(--font-l);
 }

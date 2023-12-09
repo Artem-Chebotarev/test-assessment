@@ -6,6 +6,7 @@ import { PageLoader } from '@/widgets/PageLoader';
 import { useFetchCampaigns } from '../model/services/hooks/useFetchCampaigns';
 
 const CampaignsPage = () => {
+  // Get data for CampaignList
   const { campaigns, loading, error } = useFetchCampaigns();
 
   if (error) {
