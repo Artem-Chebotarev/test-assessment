@@ -34,8 +34,6 @@
     "html-webpack-plugin": "^5.5.4",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.1.0",
-    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
-    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "stylelint": "^14.5.3",

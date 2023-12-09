@@ -1,15 +1,19 @@
+import { Typography } from '@/shared/ui/Typography';
+
 interface PageErrorProps {
-  className?: string;
+  message?: string;
 }
 
-export const PageError = ({ className }: PageErrorProps) => {
+export const PageError = (props: PageErrorProps) => {
+  const { message } = props;
+
   const reloadPage = () => {
     window.location.reload();
   };
 
   return (
     <div>
-      <p>Error has happened</p>
+      <Typography title={`${message || 'Error has happened'}`} />
       <button type='button' onClick={reloadPage}>
         Reload page
       </button>

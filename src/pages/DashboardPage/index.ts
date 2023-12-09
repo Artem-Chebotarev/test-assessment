@@ -1,3 +1,3 @@
-import { DashboardPage } from './ui/DashboardPage';
+import { DashboardPageAsync } from './ui/DashboardPage.async';
 
-export { DashboardPage };
+export { DashboardPageAsync as DashboardPage };
