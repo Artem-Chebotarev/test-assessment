@@ -1,0 +1,13 @@
+.CampaignItem {
+  padding: 12px 24px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 16px;
+  background-color: var(--secondary-bg-color);
+  min-width: 400px;
+  height: 100px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 14px #222121b9;
+  }
+}

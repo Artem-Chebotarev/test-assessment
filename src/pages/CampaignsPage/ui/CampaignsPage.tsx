@@ -1,32 +1,24 @@
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { CampaignList } from '@/entities/Campaign';
 import { Page } from '@/widgets/Page';
 import { PageError } from '@/widgets/PageError';
 import { PageLoader } from '@/widgets/PageLoader';
 
 import { useFetchCampaigns } from '../model/services/hooks/useFetchCampaigns';
 
-import cls from './CampaignsPage.module.scss';
-
-interface CampaignsPageProps {
-  className?: string;
-}
-
-const CampaignsPage = (props: CampaignsPageProps) => {
-  const { className } = props;
-
-  const { campaigns, status, error } = useFetchCampaigns();
+const CampaignsPage = () => {
+  const { campaigns, loading, error } = useFetchCampaigns();
 
   if (error) {
     return <PageError message={error} />;
   }
 
-  if (status === 'loading') {
+  if (loading) {
     return <PageLoader />;
   }
 
   return (
-    <Page className={classNames(cls.CampaignsPage, {}, [className])}>
-      CampaignsPage
+    <Page>
+      <CampaignList campaigns={campaigns} />
     </Page>
   );
 };
