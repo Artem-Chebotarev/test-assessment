@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 
-import { ICampaign, TStatus } from '@/shared/types/api';
+import { ICampaign } from '@/entities/Campaign';
 
 /**
- * Custom hook to fetch data from API
+ * Custom hook to fetch list of campaigns from API
  */
 export const useFetchCampaigns = () => {
   const [campaigns, setCampaigns] = useState<ICampaign[]>([]);
-  const [status, setStatus] = useState<TStatus>('idle');
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        setStatus('loading');
+        setLoading(true);
 
         const response = await fetch(__API__, {
           method: 'GET',
@@ -25,24 +25,21 @@ export const useFetchCampaigns = () => {
         if (response.ok) {
           const data = await response.json();
 
-          setCampaigns(data);
-
-          setStatus('success');
+          setCampaigns(data.campaigns);
         }
       } catch (e: unknown) {
         if (e instanceof Error) {
           console.error(e.message);
 
           setError(e.message);
-          setStatus('error');
         }
       } finally {
-        setStatus('idle');
+        setLoading(false);
       }
     };
 
     fetchCampaigns();
   }, []);
 
-  return { campaigns, status, error };
+  return { campaigns, loading, error };
 };
