@@ -1,3 +1,3 @@
-import { CampaignsPage } from './ui/CampaignsPage';
+import { CampaignsPageAsync } from './ui/CampaignsPage.async';
 
-export { CampaignsPage };
+export { CampaignsPageAsync as CampaignsPage };

@@ -1,0 +1,9 @@
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--help-color-000);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px 20px 30px;
+}

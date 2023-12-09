@@ -7,8 +7,10 @@ interface DashboardPageProps {
   className?: string;
 }
 
-export const DashboardPage = ({ className }: DashboardPageProps) => (
+const DashboardPage = ({ className }: DashboardPageProps) => (
   <Page className={classNames(cls.DashboardPage, {}, [className])}>
     DashboardPage
   </Page>
 );
+
+export default DashboardPage;

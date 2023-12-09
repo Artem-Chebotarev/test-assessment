@@ -1,16 +1,19 @@
+import SpinnerImg from '@/shared/assets/icons/spinner.svg';
 import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
-import './Loader.module.scss';
+import cls from './Loader.module.scss';
 
 interface LoaderProps {
   className?: string;
 }
 
-export const Loader = ({ className }: LoaderProps) => (
-  <div className={classNames('lds-ellipsis', {}, [className])}>
-    <div />
-    <div />
-    <div />
-    <div />
-  </div>
-);
+export const Loader = (props: LoaderProps) => {
+  const { className } = props;
+  return (
+    <div className={classNames(cls.LoaderWrapper, {}, [className])}>
+      <div className={cls.LoaderBox}>
+        <SpinnerImg />
+      </div>
+    </div>
+  );
+};
