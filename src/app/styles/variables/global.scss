@@ -1,5 +1,5 @@
 :root {
-  --font-family-main: 'rawline', sans-serif;
+  --font-family-main: "rawline", sans-serif;
 
   /*
   * S
@@ -28,4 +28,9 @@
   --font-size-xl: 32px;
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+  /*
+  * Sizes
+  */
+  --navbar-height: 50px;
 }
