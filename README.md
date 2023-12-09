@@ -11,7 +11,7 @@ npm run start - start the frontend project in dev mode
 
 ### 1. Install NodeJS
 
-### 1. Go to server folder
+### 2. Go to server folder
 
 ```
 npm install
