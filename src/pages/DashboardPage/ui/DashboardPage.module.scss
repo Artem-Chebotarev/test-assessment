@@ -1,2 +1,44 @@
 .DashboardPage {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.DashboardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.DashboardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.DashboardTile {
+  width: 140px;
+  height: 140px;
+  border-radius: 16px;
+  padding: 12px;
+  background-color: var(--secondary-bg-color);
+
+  &:hover {
+    box-shadow: 0 4px 14px #222121b9;
+  }
+}
+
+.DashboardIteration {
+  width: 100%;
+  height: 100px;
+  background: var(--help-color-000);
+}
+
+.DashboardRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 20px 20px;
+  border-radius: 16px;
+  background: var(--help-color-000);
 }
